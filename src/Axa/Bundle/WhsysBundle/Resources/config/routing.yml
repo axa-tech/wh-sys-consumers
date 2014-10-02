@@ -1,3 +1,0 @@
-axa_whsys_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: AxaWhsysBundle:Default:index }
