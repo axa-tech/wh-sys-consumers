@@ -1,0 +1,4 @@
+axa_whsys:
+    resource: "@AxaWhsysBundle/Resources/config/routing.yml"
+    prefix:   /
+

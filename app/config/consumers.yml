@@ -1,0 +1,7 @@
+old_sound_rabbit_mq:
+    consumers:
+        create_platform:
+            connection:       default
+            exchange_options: {name: 'create-platform', type: direct}
+            queue_options:    {name: 'create-platform'}
+            callback:         axa_whsys_consumer_create_platform
