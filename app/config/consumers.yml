@@ -4,4 +4,10 @@ old_sound_rabbit_mq:
             connection:       default
             exchange_options: {name: 'create-platform', type: direct}
             queue_options:    {name: 'create-platform'}
-            callback:         axa_whsys_consumer_create_platform
+            callback:         axa_whsys_consumers.create_platform
+
+        vm_basic:
+            connection:       default
+            exchange_options: {name: 'vm-basic', type: direct}
+            queue_options:    {name: 'vm-basic'}
+            callback:         axa_whsys_consumers.vm_basic
