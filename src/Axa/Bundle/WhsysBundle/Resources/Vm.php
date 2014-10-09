@@ -1,5 +1,7 @@
 <?php
-
+/**
+Class Object Vm
+*/
 class Vm{
 	var name;
 	var bubbleid;
