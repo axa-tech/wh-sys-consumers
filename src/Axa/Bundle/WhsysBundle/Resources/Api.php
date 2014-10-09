@@ -1,11 +1,15 @@
 <?php
 use Guzzle\Http\Client;
 /**
+ * CLass APi for call OpenPass api
 */
 class Api{
 	var $base_url="http://api.local/";
 	private timeout = 60;
-	function __construct(){
+    /**
+     * Constructeur / init
+     */
+    function __construct(){
 		$this->$client = new Client();
 	}
 	/**
@@ -17,18 +21,35 @@ class Api{
 			'timeout' => $this->timeout;
 		]);
 	}
-	public function put($suffix,$jsondata){
+
+    /**
+     * @param $suffix
+     * @param $jsondata
+     * @return mixed
+     */
+    public function put($suffix,$jsondata){
 		return $response = $this->client->put($this->$base_url.$suffix	, [
 			'headers' => ['Content-Type' => 'application/json', "Content-Length" => strlen($jsondata)],
 			'timeout' => $this->timeout;
 		]);
 	}
-	public function get($suffix){
+
+    /**
+     * @param $suffix
+     * @return mixed
+     */
+    public function get($suffix){
 		return $response = $this->client->get($this->$base_url.$suffix	, [
 			'timeout' => $this->timeout;
 		]);
 	}
-	public function updateVmInfos($info,$idApi){
+
+    /**
+     * @param $info
+     * @param $idApi
+     * @return mixed
+     */
+    public function updateVmInfos($info,$idApi){
 		$tabjson=json_decode($info); 
 		$tabforapi=array("id"=>$idApi,"VMRemoteId"=>$tabjson->providerId,"name"=>$tabjson->name,"instanceName"=>$tabjson->instanceName,"ip"=>$tabjson->accessIPv4,"state"=>$tabjson->state,"status"=>$tabjson->status);
 		$jsonsend=json_encode($tabforapi);
