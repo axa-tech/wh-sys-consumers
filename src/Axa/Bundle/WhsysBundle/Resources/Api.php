@@ -4,7 +4,7 @@ use Guzzle\Http\Client;
 */
 class Api{
 	var $base_url="http://api.local/";
-	var timeout = 60;
+	private timeout = 60;
 	function __construct(){
 		$this->$client = new Client();
 	}
@@ -14,7 +14,7 @@ class Api{
 	public function post($suffix,$jsondata){
 		return $response = $this->client->post($this->$base_url.$suffix	, [
 			'headers' => ['Content-Type' => 'application/json', "Content-Length" => strlen($jsondata)],
-			'timeout' => $this->timeout,
+			'timeout' => $this->timeout;
 		]);
 	}
 	public function put($suffix,$jsondata){

@@ -10,7 +10,8 @@ class Vm{
 	var idPortail;
 	var imageId="MzA4OTJmNDItMWJhZi00MWZkLTg5MTItMDY1OWIwYTBmNTljLzJmZjQ1ZmJkLTQyODktNGE1Zi1hZjYyLWMxY2M4YTIwNTRjNA==";
 	var $flavors=array("SP"=>"NWYxMTg0MGMtYWU1NS00Yzk0LWE5YmUtMTBhMjkxYmExNGQyLzJmZjQ1ZmJkLTQyODktNGE1Zi1hZjYyLWMxY2M4YTIwNTRjNA==","MP"=>"YjVjNTVhZjAtZTg2Mi00NDhlLWI5Y2QtNWJiMzg1ODkxNzgxLzJmZjQ1ZmJkLTQyODktNGE1Zi1hZjYyLWMxY2M4YTIwNTRjNA==","LP"=>"ZjMxZDJhMTgtYTI2OS00NzM1LWE5NDctMWIxNWZlNjc3MDBjLzJmZjQ1ZmJkLTQyODktNGE1Zi1hZjYyLWMxY2M4YTIwNTRjNA==");
-	function __contruct($name,$bubbleid,$adminPass,$idApi="",$idPortail=""){
+
+    function __contruct($name,$bubbleid,$adminPass,$idApi="",$idPortail=""){
 		$this->name=$name;
 		$this->bubbleid=$bubbleid;
 		$this->adminPass=$adminPass;

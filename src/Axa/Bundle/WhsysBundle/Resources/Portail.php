@@ -28,14 +28,14 @@ class Portail{
 		return $response = $this->client->put($this->$base_url.$suffix	, [
 			'headers' => ['Content-Type' => 'application/json', "Content-Length" => strlen($jsondata)],
 			'proxy'	  => $this->proxy,
-			'timeout' => $this->timeout;
-			'cookies' => ['JSESSIONID' => $this->cookie.'; path=/; domain=portal.axa-cloud.com; HttpOnly']
+			'timeout' => $this->timeout,
+            'cookies' => ['JSESSIONID' => $this->cookie.'; path=/; domain=portal.axa-cloud.com; HttpOnly']
 		]);
 	}
 	public function get($suffix){
 		return $response = $this->client->get($this->$base_url.$suffix	, [
 			'proxy'	  => $this->proxy,
-			'timeout' => $this->timeout;
+			'timeout' => $this->timeout,
 			'cookies' => ['JSESSIONID' => $this->cookie.'; path=/; domain=portal.axa-cloud.com; HttpOnly']
 		]);
 	}
